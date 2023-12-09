@@ -290,24 +290,18 @@ bool oled_task_user(void) {
 }
 #endif
 
-#ifdef ENCODER_ENABLE
-bool encoder_update_user(uint8_t index, bool clockwise) {
-
-    if (index == 0) {
-        // Volume control
-        if (clockwise) {
-            tap_code(KC_VOLU);
-        } else {
-            tap_code(KC_VOLD);
-        }
-    } else if (index == 1) {
-        // Page up/Page down
-        if (clockwise) {
-            tap_code(KC_PGDN);
-        } else {
-            tap_code(KC_PGUP);
-        }
-    }
-    return false;
-}
-#endif
+// #ifdef ENCODER_MAP_ENABLE
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+    [_QWERTY] =     { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
+    [_DVORAK] =     { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______)           },
+    [_COLEMAK_DH] = { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______)           },
+    [_NAV] =        { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______)           },
+    [_SYM] =        { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______)           },
+    [_FUNCTION] =   { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______)           },
+    [_ADJUST] =     { ENCODER_CCW_CW(RGB_VAD, RGB_VAI), ENCODER_CCW_CW(RGB_RMOD, RGB_MOD)          },
+    // [_BASE]   = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    // [_LOWER]  = {ENCODER_CCW_CW(RGB_HUD, RGB_HUI), ENCODER_CCW_CW(RGB_SAD, RGB_SAI)},
+    // [_RAISE]  = {ENCODER_CCW_CW(RGB_VAD, RGB_VAI), ENCODER_CCW_CW(RGB_SPD, RGB_SPI)},
+    // [_ADJUST] = {ENCODER_CCW_CW(RGB_RMOD, RGB_MOD), ENCODER_CCW_CW(KC_RIGHT, KC_LEFT)},
+};
+// #endif
