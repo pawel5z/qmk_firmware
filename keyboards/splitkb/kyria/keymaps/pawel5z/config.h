@@ -34,3 +34,9 @@
 #        define RGBLIGHT_LIMIT_VAL 150
 #    endif
 #endif
+
+// Enable proper main half detection because of J1 on my Pro Micro.
+#define SPLIT_USB_DETECT
+
+// Lower encoder resolution to prevent skipping every other tick.
+#define ENCODER_RESOLUTION 2
