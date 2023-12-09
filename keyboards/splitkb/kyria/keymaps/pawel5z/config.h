@@ -40,3 +40,8 @@
 
 // Lower encoder resolution to prevent skipping every other tick.
 #define ENCODER_RESOLUTION 2
+
+// https://docs.qmk.fm/#/feature_oled_driver?id=basic-configuration
+#define OLED_TIMEOUT 10000
+#define OLED_FADE_OUT
+#define OLED_FADE_OUT_INTERVAL 3
