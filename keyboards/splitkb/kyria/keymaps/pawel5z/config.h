@@ -52,3 +52,6 @@
 
 // Save memory by limiting number of layers.
 #define LAYER_STATE_8BIT
+
+// https://docs.qmk.fm/#/feature_caps_word?id=how-do-i-enable-caps-word
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
