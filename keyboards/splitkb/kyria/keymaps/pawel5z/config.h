@@ -45,3 +45,10 @@
 #define OLED_TIMEOUT 10000
 #define OLED_FADE_OUT
 #define OLED_FADE_OUT_INTERVAL 3
+
+// Not owning lock switch, therefore disable feature supporting it.
+#undef LOCKING_SUPPORT_ENABLE
+#undef LOCKING_RESYNC_ENABLE
+
+// Save memory by limiting number of layers.
+#define LAYER_STATE_8BIT
