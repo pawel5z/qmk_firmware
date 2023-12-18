@@ -302,7 +302,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 };
 // #endif
 
-// Save memory by disabling magic keycodes.
+// >>> Save memory by disabling magic keycodes.
 // https://docs.qmk.fm/#/squeezing_avr?id=magic-functions
 uint16_t keycode_config(uint16_t keycode) {
     return keycode;
@@ -311,3 +311,4 @@ uint16_t keycode_config(uint16_t keycode) {
 uint8_t mod_config(uint8_t mod) {
     return mod;
 }
+// <<< Save memory by disabling magic keycodes.
