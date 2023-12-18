@@ -215,6 +215,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 //     ),
 };
+// clang-format on
 
 /* The default OLED and rotary encoder code can be found at the bottom of qmk_firmware/keyboards/splitkb/kyria/rev1/rev1.c
  * These default settings can be overriden by your own settings in your keymap.c
@@ -291,6 +292,7 @@ bool oled_task_user(void) {
 #endif
 
 #ifdef ENCODER_MAP_ENABLE
+// clang-format off
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_QWERTY] =     { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
     [_DVORAK] =     { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______)           },
@@ -300,6 +302,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_FUNCTION] =   { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______)           },
     [_ADJUST] =     { ENCODER_CCW_CW(RGB_VAD, RGB_VAI), ENCODER_CCW_CW(RGB_RMOD, RGB_MOD)          },
 };
+// clang-format on
 #endif
 
 // >>> Save memory by disabling magic keycodes.
