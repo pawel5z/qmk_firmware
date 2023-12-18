@@ -237,7 +237,15 @@ bool oled_task_user(void) {
         // clang-format on
 
         oled_write_P(qmk_logo, false);
-        oled_write_P(PSTR("Kyria rev3.1\n\n"), false);
+        oled_write_P(PSTR("Kyria rev3.1\n"), false);
+
+        // WPM
+#    define WPM_STR_SIZE 7 // in format "XXX WPM" without null character
+        uint8_t max_chars_per_line = oled_max_chars();
+        for (int i = 0; i < (int)max_chars_per_line - WPM_STR_SIZE; i++)
+            oled_advance_char();
+        oled_write(get_u8_str(get_current_wpm(), ' '), false);
+        oled_write_P(PSTR(" WPM\n"), false);
 
         // Host Keyboard Layer Status
         oled_write_P(PSTR("Layer: "), false);
