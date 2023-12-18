@@ -53,5 +53,8 @@
 // Save memory by limiting number of layers.
 #define LAYER_STATE_8BIT
 
+// Disable one shot keys to save memory.
+#define NO_ACTION_ONESHOT
+
 // https://docs.qmk.fm/#/feature_caps_word?id=how-do-i-enable-caps-word
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD

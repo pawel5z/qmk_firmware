@@ -14,3 +14,8 @@ CAPS_WORD_ENABLE = yes
 # Memory optimization
 LTO_ENABLE = yes
 AVR_USE_MINIMAL_PRINTF = yes
+CONSOLE_ENABLE = no
+COMMAND_ENABLE = no
+
+# Enable Words Per Minute (WPM) calculation
+WPM_ENABLE = yes
