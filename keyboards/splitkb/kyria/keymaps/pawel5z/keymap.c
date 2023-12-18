@@ -290,7 +290,7 @@ bool oled_task_user(void) {
 }
 #endif
 
-// #ifdef ENCODER_MAP_ENABLE
+#ifdef ENCODER_MAP_ENABLE
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_QWERTY] =     { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
     [_DVORAK] =     { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______)           },
@@ -300,7 +300,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_FUNCTION] =   { ENCODER_CCW_CW(_______, _______), ENCODER_CCW_CW(_______, _______)           },
     [_ADJUST] =     { ENCODER_CCW_CW(RGB_VAD, RGB_VAI), ENCODER_CCW_CW(RGB_RMOD, RGB_MOD)          },
 };
-// #endif
+#endif
 
 // >>> Save memory by disabling magic keycodes.
 // https://docs.qmk.fm/#/squeezing_avr?id=magic-functions
