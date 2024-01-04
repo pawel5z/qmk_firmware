@@ -42,9 +42,9 @@
 #define ENCODER_RESOLUTION 2
 
 // https://docs.qmk.fm/#/feature_oled_driver?id=basic-configuration
-#define OLED_TIMEOUT 10000
+#define OLED_TIMEOUT 5000
 #define OLED_FADE_OUT
-#define OLED_FADE_OUT_INTERVAL 3
+#define OLED_FADE_OUT_INTERVAL 1
 
 // Not owning lock switch, therefore disable feature supporting it.
 #undef LOCKING_SUPPORT_ENABLE
