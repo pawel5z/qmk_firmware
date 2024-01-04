@@ -312,6 +312,22 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 // clang-format on
 #endif
 
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case DF(0):
+            set_single_persistent_default_layer(0);
+            return false;
+        case DF(1):
+            set_single_persistent_default_layer(1);
+            return false;
+        case DF(2):
+            set_single_persistent_default_layer(2);
+            return false;
+        default:
+            return true; // Process all other keycodes normally
+    }
+}
+
 // >>> Save memory by disabling magic keycodes.
 // https://docs.qmk.fm/#/squeezing_avr?id=magic-functions
 uint16_t keycode_config(uint16_t keycode) {
