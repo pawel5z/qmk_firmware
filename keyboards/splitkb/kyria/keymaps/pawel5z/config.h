@@ -38,6 +38,9 @@
 // Enable proper main half detection because of J1 on my Pro Micro.
 #define SPLIT_USB_DETECT
 
+// Enable reset if slave does not establish communication.
+#define SPLIT_WATCHDOG_ENABLE
+
 // Lower encoder resolution to prevent skipping every other tick.
 #define ENCODER_RESOLUTION 2
 
