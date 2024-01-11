@@ -19,3 +19,5 @@ COMMAND_ENABLE = no
 
 # Enable Words Per Minute (WPM) calculation
 WPM_ENABLE = yes
+
+SRC = data.c
