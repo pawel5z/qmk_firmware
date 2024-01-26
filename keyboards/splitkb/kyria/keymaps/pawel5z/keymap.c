@@ -274,7 +274,7 @@ bool oled_task_user(void) {
         oled_write_P(led_usb_state.caps_lock   ? PSTR("CAPLCK ") : PSTR("       "), false);
         oled_write_P(led_usb_state.scroll_lock ? PSTR("SCRLCK ") : PSTR("       "), false);
     } else {
-        oled_write_raw_P(kyria_logo, sizeof(kyria_logo));
+        oled_write_raw_P(kyria_logo, sizeof(kKyriaLogoSize));
     }
     return false;
 }

@@ -3,5 +3,5 @@
 
 extern const char PROGMEM qmk_logo[];
 
-#define K_KYRIA_LOGO_SIZE 1024
-extern const char PROGMEM kyria_logo[K_KYRIA_LOGO_SIZE];
+extern const size_t       kKyriaLogoSize;
+extern const char PROGMEM kyria_logo[];
