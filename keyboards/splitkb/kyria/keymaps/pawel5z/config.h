@@ -61,3 +61,9 @@
 
 // https://docs.qmk.fm/#/feature_caps_word?id=how-do-i-enable-caps-word
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+// Switch off RGB when the host goes to sleep
+#define RGBLIGHT_SLEEP
+
+// Disable RGB lighting upon clearing the EEPROM
+#define RGBLIGHT_DEFAULT_ON false
