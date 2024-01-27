@@ -67,3 +67,6 @@
 
 // Make 0 the default brightness value upon clearing the EEPROM
 #define RGBLIGHT_DEFAULT_VAL 0
+
+// Enable RGB sync for split keyboard
+#define RGBLIGHT_SPLIT
