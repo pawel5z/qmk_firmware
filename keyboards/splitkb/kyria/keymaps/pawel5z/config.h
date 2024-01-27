@@ -65,5 +65,5 @@
 // Switch off RGB when the host goes to sleep
 #define RGBLIGHT_SLEEP
 
-// Disable RGB lighting upon clearing the EEPROM
-#define RGBLIGHT_DEFAULT_ON false
+// Make 0 the default brightness value upon clearing the EEPROM
+#define RGBLIGHT_DEFAULT_VAL 0
